@@ -126,7 +126,7 @@ Root scripts are thin wrappers over `pnpm -r`. Application code stays in `apps/`
 
 - [Architecture](docs/architecture.md)
 - [API](docs/api.md)
-- [Decisions (ADRs)](docs/decisions.md)
+- [ADR index](docs/decisions.md) — [monorepo](docs/adr/0001-monorepo.md), [Kafka](docs/adr/0002-kafka.md), [microservices](docs/adr/0003-microservices.md), [TimescaleDB](docs/adr/0004-timescaledb.md), [cache](docs/adr/0005-cache-strategy.md)
 
 ## License
 

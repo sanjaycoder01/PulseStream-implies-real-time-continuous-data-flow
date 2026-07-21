@@ -1,31 +1,23 @@
-# Architecture Decision Records (ADRs)
+# Architecture Decision Records
 
-> Placeholder — record significant technical decisions here as the project evolves.
+Significant technical decisions live as numbered ADRs under [`adr/`](./adr/).
 
-## Template
+## Index
 
-```markdown
-## ADR-XXX: Title
+| ADR | Title |
+|-----|-------|
+| [0001](./adr/0001-monorepo.md) | pnpm workspaces monorepo |
+| [0002](./adr/0002-kafka.md) | Apache Kafka as the event backbone |
+| [0003](./adr/0003-microservices.md) | Microservices decomposition |
+| [0004](./adr/0004-timescaledb.md) | TimescaleDB for time-series analytics |
+| [0005](./adr/0005-cache-strategy.md) | Redis cache strategy |
 
-- **Status:** Proposed | Accepted | Superseded
-- **Date:** YYYY-MM-DD
-- **Context:** Why this decision was needed
-- **Decision:** What we chose
-- **Consequences:** Trade-offs and follow-ups
-```
+## How to add an ADR
 
-## Initial decisions (scaffold phase)
+1. Copy the structure of an existing file in `adr/`.
+2. Use the next number: `0006-<slug>.md`.
+3. Include: **Context/Problem**, **Decision**, **Alternatives considered**, **Trade-offs**, **Consequences**.
+4. Link it in the index above.
+5. Set status to `Proposed` until accepted.
 
-### ADR-001: pnpm workspaces monorepo
-
-- **Status:** Accepted
-- **Context:** Multiple Node/TypeScript services and shared libraries need consistent tooling.
-- **Decision:** Use pnpm workspaces with `apps/*` and `packages/*`.
-- **Consequences:** Single install/lint/build surface; clear service boundaries.
-
-### ADR-002: Shared packages before shared implementation
-
-- **Status:** Accepted
-- **Context:** Cross-cutting concerns (logger, Kafka client, schemas, types) will be reused.
-- **Decision:** Scaffold empty packages first; implement after service contracts stabilize.
-- **Consequences:** Avoids premature coupling; packages are ready for incremental fill-in.
+Do not rewrite history of accepted ADRs — supersede them with a new ADR instead.

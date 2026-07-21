@@ -1,0 +1,28 @@
+# Real-Time Event Analytics Platform — local infrastructure
+# Placeholder compose file. Detailed configuration TBD.
+
+services:
+  zookeeper:
+    # TODO: image, ports, volumes, healthcheck
+    image: confluentinc/cp-zookeeper:7.6.1
+    # TODO: ZOOKEEPER_CLIENT_PORT, data dirs
+
+  kafka:
+    # TODO: image config, depends_on zookeeper, advertised listeners, topics init
+    image: confluentinc/cp-kafka:7.6.1
+    # TODO: KAFKA_BROKER_ID, KAFKA_ZOOKEEPER_CONNECT, ports
+
+  postgres:
+    # TODO: credentials via env, init scripts, volume mounts
+    image: postgres:16-alpine
+    # TODO: POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB, ports
+
+  timescaledb:
+    # TODO: Timescale extension setup, hypertables init, credentials
+    image: timescale/timescaledb:latest-pg16
+    # TODO: POSTGRES_*, ports (avoid clash with postgres), volumes
+
+  redis:
+    # TODO: persistence, maxmemory policy, auth if needed
+    image: redis:7-alpine
+    # TODO: ports, command flags, volumes

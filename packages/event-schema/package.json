@@ -10,7 +10,9 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "clean": "rm -rf dist"
   },
-  "dependencies": {},
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
   "devDependencies": {
     "typescript": "^5.7.2"
   }

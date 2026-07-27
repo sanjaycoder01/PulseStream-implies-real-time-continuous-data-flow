@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "include": [
+    "postgres/**/*.ts",
+    "redis/**/*.ts",
+    "migrations/**/*.ts",
+    "index.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}
